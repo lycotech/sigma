@@ -6,10 +6,10 @@ const images = {
   reception: { src: "/images/office-reception.jpg", pos: "70% 50%" },
   executive: { src: "/images/office-executive.jpg", pos: "60% 50%" },
   lobby: { src: "/images/office-lobby.jpg", pos: "50% 40%" },
-  desk: { src: "/images/office-desk.jpg", pos: "50% 50%" },
+  desk: { src: "/images/office-desk.jpg", pos: "45% 50%" },
 } as const;
 
-/** Navy page header with a real office photograph on the right (desktop). */
+/** Bright page header: graph-paper background, navy title, arch-framed office photograph. */
 export function PageHero({
   eyebrow,
   title,
@@ -25,26 +25,21 @@ export function PageHero({
 }) {
   const img = images[image];
   return (
-    <section className="on-dark relative overflow-hidden bg-navy-900 text-white">
-      <div className="container-x grid items-center gap-10 py-14 md:py-20 lg:grid-cols-12">
-        <Reveal className="lg:col-span-7">
-          <p className="mb-4 text-sm font-semibold text-sky-300">{eyebrow}</p>
-          <h1 className="t-hero max-w-3xl" style={{ fontSize: "clamp(2.1rem, 1.2rem + 3.4vw, 4rem)" }}>
+    <section className="relative overflow-hidden bg-paper-2">
+      <div aria-hidden className="bg-grid absolute inset-0" />
+      <div className="container-x relative grid items-center gap-10 py-14 md:py-20 lg:grid-cols-12">
+        <Reveal className="lg:col-span-8">
+          <p className="mb-5 inline-flex rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold text-brand-600 shadow-card">
+            {eyebrow}
+          </p>
+          <h1 className="max-w-3xl text-navy-900" style={{ fontSize: "clamp(2.2rem, 1.2rem + 3.6vw, 4.2rem)", lineHeight: 1.05 }}>
             {title}
           </h1>
-          {lead && <p className="t-lead mt-5 max-w-2xl text-white/80">{lead}</p>}
+          {lead && <p className="t-lead mt-5 max-w-2xl text-ink-soft">{lead}</p>}
           {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
         </Reveal>
-        <div className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl lg:col-span-5 lg:block">
-          <Image
-            src={img.src}
-            alt=""
-            fill
-            priority
-            sizes="40vw"
-            className="object-cover"
-            style={{ objectPosition: img.pos }}
-          />
+        <div className="relative hidden aspect-[4/5] w-full max-w-xs overflow-hidden rounded-t-[999px] rounded-b-3xl shadow-lift lg:col-span-4 lg:ml-auto lg:block">
+          <Image src={img.src} alt="" fill priority sizes="25vw" className="object-cover" style={{ objectPosition: img.pos }} />
         </div>
       </div>
     </section>

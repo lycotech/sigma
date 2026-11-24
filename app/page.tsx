@@ -24,9 +24,9 @@ export default function HomePage() {
       <TrustStrip />
       <Intro />
       <ServicesSection />
-      <VisionBand />
       <STraderSpotlight />
       <WhyUs />
+      <VisionBand />
       <StorySection />
       <Gallery />
       <HowToStart />

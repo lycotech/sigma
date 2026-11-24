@@ -11,7 +11,7 @@ function Dashboard({ compact }: { compact?: boolean }) {
         <p>Portfolio overview</p>
         <svg viewBox="0 0 200 60" className="mt-1 h-auto w-full" fill="none" aria-hidden>
           <path d="M0 48 L25 40 L50 44 L75 28 L100 32 L125 18 L150 22 L175 8 L200 12" stroke="#a9b8ff" strokeWidth="2" />
-          <path d="M0 48 L25 40 L50 44 L75 28 L100 32 L125 18 L150 22 L175 8 L200 12 V60 H0Z" fill="#8196f5" fillOpacity="0.15" />
+          <path d="M0 48 L25 40 L50 44 L75 28 L100 32 L125 18 L150 22 L175 8 L200 12 V60 H0Z" fill="#8196f5" fillOpacity="0.18" />
         </svg>
       </div>
       {!compact && (
@@ -38,7 +38,7 @@ export function DeviceMockup() {
           <Dashboard />
         </div>
       </div>
-      <div className="mx-[-4%] h-3 rounded-b-2xl bg-gradient-to-b from-navy-700 to-navy-900 shadow-lift" />
+      <div className="mx-[-4%] h-3 rounded-b-2xl bg-gradient-to-b from-silver to-navy-700 shadow-lift" />
       <div className="absolute -bottom-6 right-[-2%] w-[26%] rounded-[1.4rem] border-[5px] border-navy-800 bg-navy-950 shadow-lift">
         <div className="aspect-[9/18] overflow-hidden rounded-[1rem]">
           <Dashboard compact />

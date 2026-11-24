@@ -29,7 +29,7 @@ export default function ContactPage() {
           <RevealGroup className="grid gap-6 md:grid-cols-3">
             {offices.map((o) => (
               <RevealItem key={o.city}>
-                <div className="h-full rounded-2xl border border-line bg-white p-7 shadow-card">
+                <div className="h-full rounded-[2rem] border border-line bg-white p-7 shadow-card">
                   <MapPin className="size-6 text-brand-500" aria-hidden />
                   <h3 className="t-h3 mt-4 text-navy-900">{o.role}</h3>
                   <p className="mt-2 text-ink-soft">{o.address}</p>

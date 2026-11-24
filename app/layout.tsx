@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -10,6 +10,11 @@ import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -18,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: { siteName: site.name, locale: "en_NG", type: "website" },
 };
 
-export const viewport: Viewport = { themeColor: "#0a1450" };
+export const viewport: Viewport = { themeColor: "#ffffff" };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-NG" className={manrope.variable}>
+    <html lang="en-NG" className={`${manrope.variable} ${bricolage.variable}`}>
       <body>
         <a
           href="#main"

@@ -41,7 +41,7 @@ export function AnnouncementBand() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="overflow-hidden on-dark bg-brand-500 text-white"
+          className="overflow-hidden bg-brand-500 text-white"
         >
           <div className="container-x relative flex flex-wrap items-center gap-x-6 gap-y-3 py-4 pr-14">
             <Megaphone className="size-5 shrink-0" aria-hidden />

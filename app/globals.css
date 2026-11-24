@@ -20,7 +20,7 @@
   --color-up: #1f9d63;
   --color-down: #d64545;
 
-  --font-display: var(--font-manrope), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-manrope), system-ui, sans-serif;
   --font-sans: var(--font-manrope), system-ui, sans-serif;
 
   --shadow-card: 0 1px 2px rgb(10 20 80 / 0.06), 0 10px 30px -12px rgb(10 20 80 / 0.16);
@@ -44,7 +44,8 @@ body {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
   font-weight: 700;
 }
 
@@ -93,6 +94,25 @@ h3 {
   outline-offset: 2px;
 }
 
+/* Light graph-paper grid used behind hero areas */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(10 20 80 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(10 20 80 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 100%);
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
 @keyframes marquee {
   to {
     transform: translateX(-50%);
@@ -110,7 +130,8 @@ h3 {
   html {
     scroll-behavior: auto;
   }
-  .animate-marquee {
+  .animate-marquee,
+  .animate-spin-slow {
     animation: none;
   }
   *,

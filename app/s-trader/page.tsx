@@ -22,7 +22,7 @@ export default function STraderPage() {
     <>
       <PageHero eyebrow="s-Trader" title="Experience seamless online trading with s-Trader" lead="Real-time data, portfolio monitoring and execution from anywhere." image="executive">
         <Button href={site.links.clientLogin}>Client Login</Button>
-        <Button href="/open-account/" variant="outline-light">Open an Account</Button>
+        <Button href="/open-account/" variant="outline">Open an Account</Button>
       </PageHero>
       <section className="section-pad">
         <div className="container-x">
@@ -31,7 +31,7 @@ export default function STraderPage() {
           <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
               <RevealItem key={f.title}>
-                <div className="h-full rounded-2xl border border-line bg-white p-7 shadow-card">
+                <div className="h-full rounded-[2rem] border border-line bg-white p-7 shadow-card">
                   <f.icon className="size-8 text-brand-500" aria-hidden />
                   <h3 className="mt-5 font-sans text-lg font-bold text-navy-900">{f.title}</h3>
                   <p className="mt-2 text-sm text-ink-soft">{f.body}</p>

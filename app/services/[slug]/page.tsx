@@ -23,7 +23,7 @@ export default async function ServicePage({ params }: Props) {
     <>
       <PageHero eyebrow="Service" title={service.title} lead={service.intro}>
         <Button href="/open-account/">Open an Account</Button>
-        <Button href="/contact/" variant="outline-light">Speak to us</Button>
+        <Button href="/contact/" variant="outline">Speak to us</Button>
       </PageHero>
       <section className="section-pad">
         <div className="container-x max-w-3xl">

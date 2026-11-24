@@ -41,7 +41,7 @@ export function DownloadGrid() {
               <a
                 href={d.href}
                 {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-brand-500"
+                className="group flex h-full flex-col rounded-[2rem] border border-line bg-white p-7 shadow-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-brand-500"
               >
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-600">{d.category}</span>
                 <h3 className="mt-3 font-sans text-lg font-bold text-navy-900">{d.title}</h3>

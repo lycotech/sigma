@@ -22,7 +22,7 @@ function NavLink({ item }: { item: NavItem }) {
       {item.label}
       <span
         className={cn(
-          "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left bg-sky-300 transition-transform duration-300",
+          "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left rounded bg-brand-500 transition-transform duration-300",
           active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
         )}
       />
@@ -31,7 +31,7 @@ function NavLink({ item }: { item: NavItem }) {
 
   if (!item.children) {
     return (
-      <Link href={item.href} className="group whitespace-nowrap text-sm font-medium text-white">
+      <Link href={item.href} className="group whitespace-nowrap text-sm font-semibold text-navy-900">
         {label}
       </Link>
     );
@@ -52,7 +52,7 @@ function NavLink({ item }: { item: NavItem }) {
         aria-haspopup="true"
         onClick={() => setOpen((o) => !o)}
         onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
-        className="group flex items-center gap-1 whitespace-nowrap text-sm font-medium text-white"
+        className="group flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-navy-900"
       >
         {label}
         <ChevronDown className={cn("size-4 transition-transform", open && "rotate-180")} />
@@ -66,14 +66,14 @@ function NavLink({ item }: { item: NavItem }) {
             transition={{ duration: 0.15 }}
             className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3"
           >
-            <li className="rounded-xl border border-line bg-white p-2 shadow-lift">
+            <li className="rounded-2xl border border-line bg-white p-2 shadow-lift">
               <ul>
                 {item.children.map((c) => (
                   <li key={c.href}>
                     <Link
                       href={c.href}
                       onClick={() => setOpen(false)}
-                      className="block rounded-lg px-4 py-3 text-sm text-navy-900 transition-colors hover:bg-paper-2"
+                      className="block rounded-xl px-4 py-3 text-sm text-navy-900 transition-colors hover:bg-paper-2"
                     >
                       <span className="font-semibold">{c.label}</span>
                       {c.description && (
@@ -91,7 +91,7 @@ function NavLink({ item }: { item: NavItem }) {
   );
 }
 
-/** Solid navy bar (the logo is silver and white, so it needs a dark ground). Hides on scroll down, returns on scroll up. */
+/** Light, frosted bar. Hides on scroll down, returns on scroll up. */
 export function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -107,11 +107,11 @@ export function Navbar() {
       <motion.header
         animate={{ y: hidden ? "-110%" : 0 }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="on-dark fixed inset-x-0 top-0 z-50 bg-navy-900 shadow-[0_1px_0_rgb(255_255_255/0.08)]"
+        className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white/85 backdrop-blur-xl"
       >
         <nav aria-label="Primary" className="container-x flex h-20 items-center justify-between gap-6">
           <Link href="/" aria-label="Sigma Securities, home">
-            <Logo />
+            <Logo dark />
           </Link>
 
           <div className="hidden items-center gap-6 lg:flex xl:gap-8">
@@ -121,23 +121,21 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-2 lg:flex xl:gap-3">
-            <Button href={site.links.clientLogin} variant="outline-light" className="px-5">
+            <Button href={site.links.clientLogin} variant="outline" className="px-5">
               Client Login
             </Button>
-            <Button href="/open-account/" variant="white">
-              Open an Account
-            </Button>
+            <Button href="/open-account/">Open an Account</Button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <Button href="/open-account/" variant="white" className="px-4 py-2 text-xs">
+            <Button href="/open-account/" className="px-4 py-2 text-xs">
               Open Account
             </Button>
             <button
               type="button"
               aria-label="Open menu"
               onClick={() => setDrawer(true)}
-              className="grid size-11 place-items-center rounded-full text-white"
+              className="grid size-11 place-items-center rounded-full text-navy-900"
             >
               <Menu className="size-6" />
             </button>

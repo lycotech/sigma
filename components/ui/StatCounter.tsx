@@ -2,18 +2,20 @@
 
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface StatCounterProps {
   to: number;
   from?: number;
   label: string;
-  prefix?: string;
   /** Format without thousands separators (for years). */
   plain?: boolean;
+  className?: string;
+  labelClassName?: string;
 }
 
 /** Counts up to a real figure when scrolled into view. */
-export function StatCounter({ to, from = 0, label, prefix, plain }: StatCounterProps) {
+export function StatCounter({ to, from = 0, label, plain, className, labelClassName }: StatCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const reduce = useReducedMotion();
@@ -31,11 +33,10 @@ export function StatCounter({ to, from = 0, label, prefix, plain }: StatCounterP
 
   return (
     <div>
-      <span ref={ref} className="text-4xl font-bold tracking-tight text-navy-900 md:text-5xl">
-        {prefix}
+      <span ref={ref} className={cn("font-display text-5xl font-bold tracking-tight md:text-6xl", className)}>
         {plain ? value : value.toLocaleString("en-NG")}
       </span>
-      <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-ink-soft">{label}</p>
+      <p className={cn("mt-2 text-sm font-semibold", labelClassName)}>{label}</p>
     </div>
   );
 }
