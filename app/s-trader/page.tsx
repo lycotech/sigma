@@ -32,7 +32,7 @@ export default function STraderPage() {
             {features.map((f) => (
               <RevealItem key={f.title}>
                 <div className="h-full rounded-2xl border border-line bg-white p-7 shadow-card">
-                  <f.icon className="size-8 text-gold-500" aria-hidden />
+                  <f.icon className="size-8 text-brand-500" aria-hidden />
                   <h3 className="mt-5 font-sans text-lg font-bold text-navy-900">{f.title}</h3>
                   <p className="mt-2 text-sm text-ink-soft">{f.body}</p>
                 </div>
@@ -47,7 +47,7 @@ export default function STraderPage() {
           <ol className="mt-12 grid gap-6 md:grid-cols-4">
             {how.map((h, i) => (
               <li key={h} className="rounded-2xl bg-white p-6 shadow-card">
-                <span className="font-display text-4xl text-gold-500/40">{i + 1}</span>
+                <span className="text-3xl font-bold text-brand-500">{i + 1}</span>
                 <p className="mt-2 font-semibold text-navy-900">{h}</p>
               </li>
             ))}

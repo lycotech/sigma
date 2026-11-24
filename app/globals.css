@@ -1,31 +1,30 @@
 @import "tailwindcss";
 
-/* Design tokens. Swap these to re-skin the whole site. */
+/* Design tokens, taken from the Sigmasec logo (navy, royal blue, silver). Swap here to re-skin. */
 @theme {
-  --color-navy-950: #060f24;
-  --color-navy-900: #0a1b3d;
-  --color-navy-800: #112756;
-  --color-navy-700: #1b3a7a;
-  --color-brand: #1f4e9c;
-  --color-gold-300: #e3c982;
-  --color-gold-400: #d6b25e;
-  --color-gold-500: #c9a24b;
-  --color-gold-700: #8a6a22;
-  --color-paper: #f7f5f0;
-  --color-paper-2: #efece4;
-  --color-ink: #0e1726;
-  --color-ink-soft: #4a5568;
-  --color-line: #dcd7ca;
+  --color-navy-950: #050a2e;
+  --color-navy-900: #0a1450;
+  --color-navy-800: #101d73;
+  --color-navy-700: #1a2a94;
+  --color-brand-500: #1c35d0;
+  --color-brand-600: #1428a8;
+  --color-brand-700: #0f2085;
+  --color-sky-300: #a9b8ff;
+  --color-sky-400: #8196f5;
+  --color-silver: #c0c4dc;
+  --color-paper: #ffffff;
+  --color-paper-2: #f3f5fa;
+  --color-ink: #0d1330;
+  --color-ink-soft: #4b5370;
+  --color-line: #dde1ee;
   --color-up: #1f9d63;
   --color-down: #d64545;
 
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-manrope), system-ui, sans-serif;
   --font-sans: var(--font-manrope), system-ui, sans-serif;
 
-  --shadow-card: 0 1px 2px rgb(10 27 61 / 0.05), 0 8px 24px -8px rgb(10 27 61 / 0.12),
-    0 24px 48px -24px rgb(10 27 61 / 0.18);
-  --shadow-lift: 0 2px 4px rgb(10 27 61 / 0.06), 0 16px 40px -10px rgb(10 27 61 / 0.22),
-    0 40px 80px -30px rgb(10 27 61 / 0.3);
+  --shadow-card: 0 1px 2px rgb(10 20 80 / 0.06), 0 10px 30px -12px rgb(10 20 80 / 0.16);
+  --shadow-lift: 0 2px 4px rgb(10 20 80 / 0.08), 0 20px 50px -16px rgb(10 20 80 / 0.3);
 }
 
 html {
@@ -45,31 +44,30 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  letter-spacing: -0.015em;
-  font-weight: 500;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 /* Fluid type scale */
 .t-hero {
-  font-size: clamp(2.6rem, 1.4rem + 5.6vw, 6rem);
-  line-height: 1.02;
+  font-size: clamp(2.4rem, 1.3rem + 4.2vw, 4.9rem);
+  line-height: 1.04;
 }
 .t-h2 {
-  font-size: clamp(2rem, 1.2rem + 3vw, 3.75rem);
-  line-height: 1.08;
+  font-size: clamp(1.85rem, 1.2rem + 2.4vw, 3.2rem);
+  line-height: 1.1;
 }
 .t-h3 {
-  font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.85rem);
-  line-height: 1.2;
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
+  line-height: 1.25;
 }
 .t-lead {
-  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.3rem);
-  line-height: 1.6;
+  font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.2rem);
+  line-height: 1.65;
 }
 
 .section-pad {
-  padding-block: clamp(5rem, 3rem + 8vw, 9rem);
+  padding-block: clamp(4.5rem, 3rem + 6vw, 8rem);
 }
 
 .container-x {
@@ -79,56 +77,26 @@ h3 {
   padding-inline: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-.hairline {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
-}
-
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-
-.text-gold-gradient {
-  background: linear-gradient(100deg, var(--color-gold-300), var(--color-gold-500) 60%, var(--color-gold-400));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 /* Custom focus ring */
 :focus-visible {
-  outline: 2px solid var(--color-gold-500);
+  outline: 2px solid var(--color-brand-500);
   outline-offset: 3px;
   border-radius: 6px;
 }
+.on-dark :focus-visible,
+.on-dark:focus-visible {
+  outline-color: var(--color-sky-300);
+}
 
 .placeholder-tag {
-  outline: 1px dashed var(--color-gold-700);
+  outline: 1px dashed var(--color-brand-600);
   outline-offset: 2px;
 }
 
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(4%, -6%, 0) scale(1.12);
-  }
-}
 @keyframes marquee {
   to {
     transform: translateX(-50%);
   }
-}
-.animate-drift {
-  animation: drift 18s ease-in-out infinite;
 }
 .animate-marquee {
   animation: marquee 40s linear infinite;
@@ -142,7 +110,6 @@ h3 {
   html {
     scroll-behavior: auto;
   }
-  .animate-drift,
   .animate-marquee {
     animation: none;
   }

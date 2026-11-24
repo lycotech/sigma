@@ -23,7 +23,7 @@ export default function OpenAccountPage() {
             {types.map((t) => (
               <RevealItem key={t}>
                 <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card">
-                  <FileText className="size-8 text-gold-500" aria-hidden />
+                  <FileText className="size-8 text-brand-500" aria-hidden />
                   <h3 className="t-h3 mt-5 text-navy-900">{t}</h3>
                   <Button href="/downloads/" variant="ghost" className="mt-auto -ml-4 self-start">Get the form</Button>
                 </div>

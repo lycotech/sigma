@@ -17,11 +17,11 @@ export default function AboutPage() {
       <section className="section-pad">
         <div className="container-x grid gap-16 lg:grid-cols-2">
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold-700">Vision</p>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-600">Vision</p>
             <p className="t-h2 mt-4 font-display text-navy-900">{site.vision}</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold-700">Mission</p>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand-600">Mission</p>
             <p className="t-lead mt-4 text-ink-soft">{site.mission}</p>
           </Reveal>
         </div>
@@ -29,7 +29,7 @@ export default function AboutPage() {
 
       <section className="section-pad bg-paper-2">
         <div className="container-x">
-          <SectionHeading eyebrow="History" title="Our story" align="center" />
+          <SectionHeading eyebrow="History" title="Our story" />
           <div className="mt-16"><Timeline /></div>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <RevealGroup className="mt-10 space-y-4">
               {site.approach.map((a) => (
                 <RevealItem key={a}>
-                  <p className="flex gap-3 text-ink-soft"><Check className="mt-1 size-5 shrink-0 text-gold-500" aria-hidden />{a}</p>
+                  <p className="flex gap-3 text-ink-soft"><Check className="mt-1 size-5 shrink-0 text-brand-500" aria-hidden />{a}</p>
                 </RevealItem>
               ))}
             </RevealGroup>

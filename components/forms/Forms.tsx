@@ -17,13 +17,13 @@ function Success({ title, body, onAgain }: { title: string; body: string; onAgai
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       role="status"
-      className="rounded-2xl border border-gold-500/40 bg-white p-8 text-center shadow-card"
+      className="rounded-2xl border border-brand-500/40 bg-white p-8 text-center shadow-card"
     >
       <motion.span
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.1 }}
-        className="mx-auto grid size-16 place-items-center rounded-full bg-gold-500/15 text-gold-700"
+        className="mx-auto grid size-16 place-items-center rounded-full bg-brand-500/15 text-brand-600"
       >
         <CheckCircle2 className="size-9" />
       </motion.span>
@@ -36,9 +36,9 @@ function Success({ title, body, onAgain }: { title: string; body: string; onAgai
   );
 }
 
-function Submit({ busy, children }: { busy: boolean; children: ReactNode }) {
+function Submit({ busy, children, white }: { busy: boolean; children: ReactNode; white?: boolean }) {
   return (
-    <Button type="submit" disabled={busy} className="w-full sm:w-auto">
+    <Button type="submit" variant={white ? "white" : "primary"} disabled={busy} className="w-full sm:w-auto">
       {busy && <Loader2 className="size-4 animate-spin" />}
       {busy ? "Sending…" : children}
     </Button>
@@ -94,7 +94,7 @@ export function NewsletterForm() {
   if (done)
     return (
       <p role="status" className="flex items-center gap-3 rounded-2xl bg-white/10 p-5 text-white">
-        <CheckCircle2 className="size-6 text-gold-400" /> Thank you. You&apos;re subscribed (demo only).
+        <CheckCircle2 className="size-6 text-sky-300" /> Thank you. You&apos;re subscribed (demo only).
       </p>
     );
 
@@ -104,7 +104,7 @@ export function NewsletterForm() {
         <div className="flex-1 [&_label]:sr-only">
           <Input id="n-email" label="Email address" type="email" placeholder="you@example.com" autoComplete="email" error={errors.email} {...register("email")} />
         </div>
-        <Submit busy={isSubmitting}>Subscribe</Submit>
+        <Submit busy={isSubmitting} white>Subscribe</Submit>
       </div>
       <div className="text-white/70 [&_label]:text-white/70">
         <Checkbox id="n-consent" label="I agree to receive alerts and news from Sigma Securities." error={errors.consent} {...register("consent")} />

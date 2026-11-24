@@ -5,7 +5,7 @@ import {
   Gallery,
   GetInTouch,
   HowToStart,
-  Manifesto,
+  Intro,
   NewsletterSection,
   RegulatorMarquee,
   ServicesSection,
@@ -19,10 +19,10 @@ import {
 export default function HomePage() {
   return (
     <>
+      <AnnouncementBand />
       <Hero />
       <TrustStrip />
-      <AnnouncementBand />
-      <Manifesto />
+      <Intro />
       <ServicesSection />
       <VisionBand />
       <STraderSpotlight />

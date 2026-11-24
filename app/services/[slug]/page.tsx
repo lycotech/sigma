@@ -28,7 +28,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section-pad">
         <div className="container-x max-w-3xl">
           {service.placeholder && (
-            <p className="placeholder-tag mb-8 rounded-xl p-4 text-sm text-gold-700">
+            <p className="placeholder-tag mb-8 rounded-xl p-4 text-sm text-brand-600">
               [Placeholder] This service description is awaiting client review. See CONTENT_TODO.md.
             </p>
           )}
@@ -36,7 +36,7 @@ export default async function ServicePage({ params }: Props) {
             <h2 className="t-h3 text-navy-900">What&apos;s included</h2>
             <ul className="mt-6 space-y-4">
               {service.points.map((p) => (
-                <li key={p} className="flex gap-3 text-ink-soft"><Check className="mt-1 size-5 shrink-0 text-gold-500" aria-hidden />{p}</li>
+                <li key={p} className="flex gap-3 text-ink-soft"><Check className="mt-1 size-5 shrink-0 text-brand-500" aria-hidden />{p}</li>
               ))}
             </ul>
           </Reveal>

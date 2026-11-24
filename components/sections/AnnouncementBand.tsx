@@ -41,7 +41,7 @@ export function AnnouncementBand() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="overflow-hidden bg-gold-500 text-navy-950"
+          className="overflow-hidden on-dark bg-brand-500 text-white"
         >
           <div className="container-x relative flex flex-wrap items-center gap-x-6 gap-y-3 py-4 pr-14">
             <Megaphone className="size-5 shrink-0" aria-hidden />
@@ -49,10 +49,10 @@ export function AnnouncementBand() {
               The Dangote Refinery IPO is open for subscription through Sigma Securities.
             </p>
             <div className="flex gap-3">
-              <Button href={site.links.ipo} variant="secondary" className="min-h-11 px-5 py-2">
+              <Button href={site.links.ipo} variant="white" className="min-h-11 px-5 py-2">
                 Subscribe to IPO
               </Button>
-              <Button href="/open-account/" variant="ghost" className="min-h-11 px-5 py-2">
+              <Button href="/open-account/" variant="outline-light" className="min-h-11 px-5 py-2">
                 Open an Account
               </Button>
             </div>
@@ -60,7 +60,7 @@ export function AnnouncementBand() {
               type="button"
               onClick={dismiss}
               aria-label="Dismiss announcement"
-              className="absolute right-2 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full hover:bg-navy-950/10"
+              className="absolute right-2 top-1/2 grid size-11 -translate-y-1/2 place-items-center rounded-full hover:bg-white/15"
             >
               <X className="size-5" />
             </button>

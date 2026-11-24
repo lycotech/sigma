@@ -10,21 +10,21 @@ import { Logo } from "@/components/ui/SigmaMark";
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-white/75">
-      <div className="hairline" />
+      <div className="h-1 bg-brand-500" />
       <div className="container-x grid gap-12 pb-10 pt-20 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Logo />
           <p className="mt-6 max-w-xs text-sm leading-relaxed">{site.tagline}. {site.heroSub}</p>
           <ul className="mt-6 space-y-3 text-sm">
             <li>
-              <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 hover:text-gold-300">
-                <Mail className="size-4 text-gold-500" /> {site.email}
+              <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 hover:text-sky-300">
+                <Mail className="size-4 text-brand-500" /> {site.email}
               </a>
             </li>
             {site.phones.map((p) => (
               <li key={p.href}>
-                <a href={p.href} className="inline-flex items-center gap-2 hover:text-gold-300">
-                  <Phone className="size-4 text-gold-500" /> {p.label}
+                <a href={p.href} className="inline-flex items-center gap-2 hover:text-sky-300">
+                  <Phone className="size-4 text-brand-500" /> {p.label}
                 </a>
               </li>
             ))}
@@ -32,7 +32,7 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold-400">Offices</h2>
+          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-sky-300">Offices</h2>
           <ul className="mt-5 space-y-5 text-sm">
             {offices.map((o) => (
               <li key={o.city}>
@@ -44,11 +44,11 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-2">
-          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold-400">Explore</h2>
+          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-sky-300">Explore</h2>
           <ul className="mt-5 space-y-1 text-sm">
             {footerQuickLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="inline-block min-h-8 py-1 hover:text-gold-300">
+                <Link href={l.href} className="inline-block min-h-8 py-1 hover:text-sky-300">
                   {l.label}
                 </Link>
               </li>
@@ -57,17 +57,17 @@ export function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold-400">Policies</h2>
+          <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-sky-300">Policies</h2>
           <ul className="mt-5 space-y-1 text-sm">
             {policies.map((p) => (
               <li key={p.slug}>
-                <Link href={`/policies/${p.slug}/`} className="inline-block min-h-8 py-1 hover:text-gold-300">
+                <Link href={`/policies/${p.slug}/`} className="inline-block min-h-8 py-1 hover:text-sky-300">
                   {p.title}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/contact/dpo/" className="inline-block min-h-8 py-1 hover:text-gold-300">
+              <Link href="/contact/dpo/" className="inline-block min-h-8 py-1 hover:text-sky-300">
                 Data Protection Officer
               </Link>
             </li>
@@ -84,7 +84,7 @@ export function Footer() {
               href={r.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-8 items-center hover:text-gold-300"
+              className="inline-flex min-h-8 items-center hover:text-sky-300"
             >
               {r.name}
             </a>

@@ -21,7 +21,7 @@ export function DownloadGrid() {
             onClick={() => setCat(c)}
             className={cn(
               "min-h-11 rounded-full border px-5 text-sm font-semibold transition-colors",
-              cat === c ? "border-navy-900 bg-navy-900 text-white" : "border-line bg-white text-navy-900 hover:border-gold-500",
+              cat === c ? "border-navy-900 bg-navy-900 text-white" : "border-line bg-white text-navy-900 hover:border-brand-500",
             )}
           >
             {c}
@@ -41,9 +41,9 @@ export function DownloadGrid() {
               <a
                 href={d.href}
                 {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-gold-500"
+                className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-brand-500"
               >
-                <span className="text-xs font-bold uppercase tracking-widest text-gold-700">{d.category}</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-600">{d.category}</span>
                 <h3 className="mt-3 font-sans text-lg font-bold text-navy-900">{d.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-ink-soft">{d.description}</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-navy-900">

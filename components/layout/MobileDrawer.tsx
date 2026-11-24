@@ -65,7 +65,7 @@ export function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => 
                   {item.label}
                 </Link>
                 {item.children && (
-                  <ul className="mb-3 space-y-1 border-l border-gold-500/40 pl-4">
+                  <ul className="mb-3 space-y-1 border-l border-brand-500/40 pl-4">
                     {item.children.map((c) => (
                       <li key={c.href}>
                         <Link

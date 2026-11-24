@@ -14,7 +14,7 @@ export function PolicyLayout({ policy }: { policy: Policy }) {
             <ul className="space-y-1 border-l border-line lg:sticky lg:top-28">
               {policySections.map((s) => (
                 <li key={s}>
-                  <a href={`#${id(s)}`} className="-ml-px block min-h-11 border-l-2 border-transparent py-2.5 pl-4 text-sm text-ink-soft hover:border-gold-500 hover:text-navy-900">
+                  <a href={`#${id(s)}`} className="-ml-px block min-h-11 border-l-2 border-transparent py-2.5 pl-4 text-sm text-ink-soft hover:border-brand-500 hover:text-navy-900">
                     {s}
                   </a>
                 </li>

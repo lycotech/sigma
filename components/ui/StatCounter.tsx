@@ -31,7 +31,7 @@ export function StatCounter({ to, from = 0, label, prefix, plain }: StatCounterP
 
   return (
     <div>
-      <span ref={ref} className="font-display text-5xl text-navy-900 md:text-6xl">
+      <span ref={ref} className="text-4xl font-bold tracking-tight text-navy-900 md:text-5xl">
         {prefix}
         {plain ? value : value.toLocaleString("en-NG")}
       </span>

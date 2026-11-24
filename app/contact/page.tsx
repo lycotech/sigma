@@ -16,9 +16,9 @@ export default function ContactPage() {
         <div className="container-x grid gap-16 lg:grid-cols-5">
           <Reveal className="lg:col-span-3"><ContactForm /></Reveal>
           <Reveal delay={0.1} className="space-y-4 lg:col-span-2">
-            <a href={`mailto:${site.email}`} className="flex min-h-11 items-center gap-3 text-navy-900 hover:text-gold-700"><Mail className="size-5 text-gold-500" />{site.email}</a>
+            <a href={`mailto:${site.email}`} className="flex min-h-11 items-center gap-3 text-navy-900 hover:text-brand-600"><Mail className="size-5 text-brand-500" />{site.email}</a>
             {site.phones.map((p) => (
-              <a key={p.href} href={p.href} className="flex min-h-11 items-center gap-3 text-navy-900 hover:text-gold-700"><Phone className="size-5 text-gold-500" />{p.label}</a>
+              <a key={p.href} href={p.href} className="flex min-h-11 items-center gap-3 text-navy-900 hover:text-brand-600"><Phone className="size-5 text-brand-500" />{p.label}</a>
             ))}
             <p className="text-sm text-ink-soft">Office hours: [Placeholder] to be supplied.</p>
           </Reveal>
@@ -30,7 +30,7 @@ export default function ContactPage() {
             {offices.map((o) => (
               <RevealItem key={o.city}>
                 <div className="h-full rounded-2xl border border-line bg-white p-7 shadow-card">
-                  <MapPin className="size-6 text-gold-500" aria-hidden />
+                  <MapPin className="size-6 text-brand-500" aria-hidden />
                   <h3 className="t-h3 mt-4 text-navy-900">{o.role}</h3>
                   <p className="mt-2 text-ink-soft">{o.address}</p>
                 </div>

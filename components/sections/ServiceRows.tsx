@@ -28,13 +28,13 @@ export function ServiceRows({ dark = false }: { dark?: boolean }) {
               aria-hidden
               className="absolute inset-y-0 -inset-x-4 origin-bottom scale-y-0 bg-navy-900 transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-y-100 group-focus-visible:scale-y-100 md:-inset-x-8"
             />
-            <span className="relative font-display text-xl text-gold-700 transition-colors group-hover:text-gold-400 md:text-2xl">
+            <span className="relative text-lg font-bold text-brand-600 transition-colors group-hover:text-sky-300 md:text-2xl">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <span className="relative font-display text-2xl leading-tight text-navy-900 transition-[color,transform] duration-500 group-hover:translate-x-2 group-hover:text-white md:text-[1.9rem]">
+            <span className="relative text-xl font-bold leading-tight text-navy-900 transition-[color,transform] duration-500 group-hover:translate-x-2 group-hover:text-white md:text-2xl">
               {s.title}
               {s.placeholder && (
-                <span className="mt-2 block w-fit rounded border border-dashed border-gold-700/60 px-1.5 py-0.5 align-middle font-sans text-[0.55rem] font-bold uppercase tracking-wider text-gold-700 group-hover:border-gold-400 group-hover:text-gold-400 ">
+                <span className="mt-2 block w-fit rounded border border-dashed border-brand-600/60 px-1.5 py-0.5 align-middle font-sans text-[0.55rem] font-bold uppercase tracking-wider text-brand-600 group-hover:border-sky-300 group-hover:text-sky-300 ">
                   Placeholder copy
                 </span>
               )}
@@ -42,7 +42,7 @@ export function ServiceRows({ dark = false }: { dark?: boolean }) {
             <span className="relative col-span-2 col-start-2 text-ink-soft transition-colors group-hover:text-white/75 md:col-span-1 md:col-start-auto">
               {s.summary}
             </span>
-            <span className="relative row-start-1 col-start-3 grid size-12 place-items-center rounded-full border border-navy-900/25 text-navy-900 transition-all duration-500 group-hover:rotate-45 group-hover:border-gold-500 group-hover:bg-gold-500 group-hover:text-navy-950 md:row-start-auto md:col-start-auto md:size-14">
+            <span className="relative row-start-1 col-start-3 grid size-12 place-items-center rounded-full border border-navy-900/25 text-navy-900 transition-all duration-500 group-hover:border-brand-500 group-hover:bg-brand-500 group-hover:text-white md:row-start-auto md:col-start-auto md:size-14">
               <ArrowUpRight className="size-5" />
             </span>
           </Link>

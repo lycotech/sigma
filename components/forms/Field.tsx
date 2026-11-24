@@ -3,7 +3,7 @@ import type { FieldError } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
 const control =
-  "w-full min-h-12 rounded-xl border bg-white px-4 py-3 text-base text-ink transition-colors placeholder:text-ink-soft/60 focus:border-gold-500";
+  "w-full min-h-12 rounded-xl border bg-white px-4 py-3 text-base text-ink transition-colors placeholder:text-ink-soft/60 focus:border-brand-500";
 
 interface FieldShellProps {
   label: string;
@@ -100,7 +100,7 @@ export function Checkbox({
   return (
     <div>
       <label htmlFor={id} className="flex min-h-11 items-start gap-3 text-sm text-ink-soft">
-        <input id={id} type="checkbox" className="mt-1 size-5 accent-[var(--color-gold-500)]" {...rest} />
+        <input id={id} type="checkbox" className="mt-1 size-5 accent-[var(--color-brand-500)]" {...rest} />
         <span>{label}</span>
       </label>
       {error && (
@@ -114,7 +114,7 @@ export function Checkbox({
 
 export function DemoNote() {
   return (
-    <p className="rounded-xl border border-dashed border-gold-700/50 bg-gold-500/10 p-3 text-xs text-navy-900">
+    <p className="rounded-xl border border-dashed border-brand-600/50 bg-brand-500/10 p-3 text-xs text-navy-900">
       Demonstration form: nothing is sent or stored. Please do not enter sensitive information
       such as BVN, bank details or ID numbers.
     </p>

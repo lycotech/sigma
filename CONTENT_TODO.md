@@ -16,6 +16,6 @@
 ## Wording to confirm
 - The current site still says "Nigerian Stock Exchange" in places; this build uses "NGX" in the trust strip and "Nigerian exchange" in service copy, except the 1995 history, which keeps the original name. Confirm preferred wording.
 - Regulator links: NGX is `nse.com.ng` as given on the current site; confirm the correct domain.
-- Ticker bar is illustrative data only (SAMPLE-A, etc.). Replace or remove.
+
 - Logo: `public/logo.png` is only 150x80px with a white background; it is shown on a white chip. Supply an SVG or hi-res/transparent logo.
 - Photos: office photos supplied by the client are used; confirm usage rights. A stock photo in the folder was deliberately not used.

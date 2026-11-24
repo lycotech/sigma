@@ -22,7 +22,7 @@ export function Logo({ className }: { className?: string }) {
       <LogoImage />
       <span className="hidden whitespace-nowrap leading-none xl:block">
         <span className="block font-display text-xl tracking-tight text-white">Sigma Securities</span>
-        <span className="mt-1.5 block text-[0.6rem] font-bold uppercase tracking-[0.32em] text-gold-400">
+        <span className="mt-1.5 block text-[0.6rem] font-bold uppercase tracking-[0.32em] text-sky-300">
           Limited · Since 1995
         </span>
       </span>
